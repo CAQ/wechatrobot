@@ -1,0 +1,10 @@
+# -*- coding: utf-8 -*-
+
+def GetAnswer(content):
+	if content.find(u'提问：') != 0:
+		return None
+	content = content[3 : ].strip()
+	if len(content.strip()) == 0:
+		return None
+	return '你刚才问的是：' + str(content)
+
